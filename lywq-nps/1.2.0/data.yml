@@ -1,0 +1,10 @@
+additionalProperties:
+  formFields:
+    - default: 9800
+      edit: true
+      envKey: NPS_BASE_PORT
+      labelEn: Port
+      labelZh: 端口（nps服务端口，nps管理面板端口，nps服务http端口，nps服务https端口）
+      required: true
+      rule: paramPort
+      type: number

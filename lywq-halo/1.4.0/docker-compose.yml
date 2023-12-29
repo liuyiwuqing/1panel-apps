@@ -1,0 +1,27 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  lywq-halo:
+    container_name: ${CONTAINER_NAME}
+    image: liuyiwuqing/lywq-halo:1.4.0
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${HALO_BASE_PORT}:${HALO_BASE_PORT}
+    volumes:
+      - ./:/root/.halo
+    environment:
+      - SERVER_PORT=${HALO_BASE_PORT}
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
+      - SPRING_DATASOURCE_URL=jdbc:mysql://172.18.0.1:12256/lywq?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=lywq
+      - SPRING_DATASOURCE_PASSWORD=77585love.
+      - HALO_ADMIN_PATH=${HALO_ADMIN_PATH}
+      - HALO_CACHE=redis
+      - SPRING_REDIS_PORT=12259
+      - SPRING_REDIS_DATABASE=1
+      - SPRING_REDIS_HOST=172.18.0.1
+      - SPRING_REDIS_PASSWORD=77585love.
+version: "3"

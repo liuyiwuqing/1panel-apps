@@ -1,0 +1,18 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  lywq-nps:
+    container_name: ${CONTAINER_NAME}
+    image: liuyiwuqing/lywq-nps:1.1.2
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+        # nps服务端口，nps管理面板端口，nps服务http端口，nps服务https端口
+      - 0.0.0.0:${NPS_BASE_PORT}:${NPS_BASE_PORT}
+    volumes:
+      - ./conf:/conf
+    labels:
+      createdBy: "Apps"
+version: "3"

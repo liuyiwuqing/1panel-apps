@@ -1,0 +1,20 @@
+name: lywq-nps
+tags:
+    - 工具
+title: 轻量级、高性能、功能强大的内网穿透代理服务器
+type: 工具
+description: 轻量级、高性能、功能强大的内网穿透代理服务器
+additionalProperties:
+    key: lywq-nps
+    name: lywq-nps
+    tags:
+        - Tool
+    shortDescZh: 轻量级、高性能、功能强大的内网穿透代理服务器
+    shortDescEn: Lightweight, high-performance, powerful intranet penetration proxy server
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: http://nps.muyin.site  #官网地址
+    github: https://github.com/liuyiwuqing/nps  #github 地址
+    document: https://github.com/liuyiwuqing/nps#readme  #文档地址

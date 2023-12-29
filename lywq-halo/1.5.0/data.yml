@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: 8090
+      edit: true
+      envKey: HALO_BASE_PORT
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: lywq_admin
+      edit: true
+      envKey: HALO_ADMIN_PATH
+      labelEn: AdminPath
+      labelZh: 后台入口
+      required: true
+      type: text
